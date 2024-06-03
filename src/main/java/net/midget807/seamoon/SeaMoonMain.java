@@ -1,11 +1,9 @@
 package net.midget807.seamoon;
 
 import net.fabricmc.api.ModInitializer;
-
 import net.midget807.seamoon.block.ModBlocks;
 import net.midget807.seamoon.block.seamoon.entity.ModBlockEntities;
 import net.midget807.seamoon.item.ModItems;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

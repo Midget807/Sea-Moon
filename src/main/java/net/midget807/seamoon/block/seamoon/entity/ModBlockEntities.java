@@ -4,8 +4,6 @@ import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityT
 import net.midget807.seamoon.SeaMoonMain;
 import net.midget807.seamoon.block.ModBlocks;
 import net.midget807.seamoon.block.seamoon.entity.seamoon.ExtractorBlockEntity;
-import net.minecraft.block.Block;
-import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
