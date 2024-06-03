@@ -1,13 +1,13 @@
 package net.midget807.seamoon.block.seamoon;
 
 import com.mojang.logging.LogUtils;
-import net.midget807.seamoon.block.seamoon.entity.ExtractorBehavior;
 import net.midget807.seamoon.block.seamoon.entity.seamoon.ExtractorBlockEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.DispenserBlock;
 import net.minecraft.block.dispenser.DispenserBehavior;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.block.entity.DispenserBlockEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
@@ -15,6 +15,7 @@ import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.util.math.BlockPointer;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import org.slf4j.Logger;
 
@@ -38,8 +39,8 @@ public class ExtractorBlock extends DispenserBlock {
 
     @Override
     protected void dispense(ServerWorld world, BlockState state, BlockPos pos) {
-        ExtractorBlockEntity extractorBlockEntity = (ExtractorBlockEntity) world.getBlockEntity(pos, BlockEntityType.DISPENSER).orElse((Object)null);
-        if (extractorBlockEntity == null) {
+        DispenserBlockEntity dispenserBlockEntity = world.getBlockEntity(pos, BlockEntityType.DROPPER).orElse(null);
+        if (dispenserBlockEntity == null) {
             LOGGER.warn("Ignoring dispensing attempt for Dispenser without matching block entity at {}", pos);
         } else {
             BlockPointer blockPointer = new BlockPointer(world, pos, state, dispenserBlockEntity);

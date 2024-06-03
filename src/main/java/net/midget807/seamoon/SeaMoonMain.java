@@ -2,6 +2,8 @@ package net.midget807.seamoon;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.midget807.seamoon.block.ModBlocks;
+import net.midget807.seamoon.block.seamoon.entity.ModBlockEntities;
 import net.midget807.seamoon.item.ModItems;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
@@ -17,6 +19,8 @@ public class SeaMoonMain implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
+		ModBlockEntities.registerModBlockEntities();
 		LOGGER.info("Hello Fabric world!");
 	}
 }
