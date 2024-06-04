@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:bucket"
+    },
+    "S": {
+      "item": "seamoon:seamoon_bottle"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SSS",
+    " B "
+  ],
+  "result": {
+    "item": "seamoon:seamoon_bucket"
+  },
+  "show_notification": true
+}

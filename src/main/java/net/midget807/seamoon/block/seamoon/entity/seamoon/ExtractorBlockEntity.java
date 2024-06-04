@@ -18,7 +18,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 
 public class ExtractorBlockEntity extends DispenserBlockEntity {
-
+    private DefaultedList<ItemStack> inventory = DefaultedList.ofSize(9, ItemStack.EMPTY);
     protected ExtractorBlockEntity(BlockEntityType<?> blockEntityType, BlockPos blockPos, BlockState blockState) {
         super(blockEntityType, blockPos, blockState);
     }
@@ -30,5 +30,29 @@ public class ExtractorBlockEntity extends DispenserBlockEntity {
     @Override
     protected Text getContainerName() {
         return Text.translatable("container.seamoon.extractor");
+
     }
+
+    @Override
+    public int chooseNonEmptySlot(Random random) {
+        this.checkLootInteraction(null);
+        int i = -1;
+        int j = 1;
+        for (int k = 0; k < this.inventory.size(); ++k) {
+            if (this.inventory.get(k).isEmpty() || random.nextInt(j++) != 0) continue;
+            i = k;
+        }
+        return i;
+    }
+
+    @Override
+    public int addToFirstFreeSlot(ItemStack stack) {
+        for (int i = 0; i < this.inventory.size(); ++i) {
+            if (!this.inventory.get(i).isEmpty()) continue;
+            this.setStack(i, stack);
+            return i;
+        }
+        return -1;
+    }
+
 }

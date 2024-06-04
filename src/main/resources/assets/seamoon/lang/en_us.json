@@ -1,3 +1,9 @@
 {
-  "container.seamoon.extractor": "Extractor"
+  "item.seamoon.seamoon_bottle": "Bottle of Sea Moon",
+
+  "effect.seamoon.affectionate": "Affectionate",
+
+  "container.seamoon.extractor": "Extractor",
+
+  "death.attack.seamoon.bucket_death.message": "%1$s be-came one with the seed ∽▶"
 }
