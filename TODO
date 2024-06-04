@@ -1,1 +1,12 @@
-//TODO finish extractor block and add temporary texture using vanilla dispenser texture 
+//TODO fix extractor block or mixin dispenser behavior
+//TODO fix bucket pickup, bucket drinking, bottle drinking sounds -- SoundEvents.BREAK_HONEY_BLOCK, DRINK_HONEY, DRINK_HONEY
+//TODO fix Sea Moon Fluid + texture
+//TODO mixin affection attribute into LivingEntity.class -- ref. archived Elementals code
+//TODO mixin affection attribute modifying method into LivingEntity.class -- if (affection >= 10.0) {heart particle}
+//TODO mixin @Unique method to extract Sea Moon from living entities into GlassBottleItem.class if affection atrribute >= 10.0f
+//TODO add icon for Affectionate status effect
+//TODO add Sea Moon blocks and block variant (eg. stairs and slabs) -- SoundEvents.PLACE/BREAK_HONEY_BLOCK
+//TODO add Sea Moon variant of all foods -- gives affectionate effect + normal actions
+
+//Advanced: ====================================================================================================================
+//TODO add Farmer's Delight extension and add Sea Moon variants of FD foods
