@@ -29,6 +29,7 @@ public class ModModelProvider extends FabricModelProvider {
         seamoonPool.pressurePlate(ModBlocks.SEAMOON_PRESSURE_PLATE);
         blockStateModelGenerator.registerDoor(ModBlocks.SEAMOON_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.SEAMOON_TRAPDOOR);
+        blockStateModelGenerator.registerWallPlant(ModBlocks.SEAMOON_SPLATTER);
     }
 
     @Override

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "seamoon:block/seamoon_slab"
+    },
+    "type=double": {
+      "model": "seamoon:block/seamoon_block"
+    },
+    "type=top": {
+      "model": "seamoon:block/seamoon_slab_top"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "seamoon:block/seamoon_pressure_plate"
+    },
+    "powered=true": {
+      "model": "seamoon:block/seamoon_pressure_plate_down"
+    }
+  }
+}

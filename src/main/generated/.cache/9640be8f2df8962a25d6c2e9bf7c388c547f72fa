@@ -1,1 +1,11 @@
-// 1.20.2	2024-06-04T22:06:34.0232763	Sea Moon/Block Loot Tables
+// 1.20.2	2024-06-06T00:44:54.3134166	Sea Moon/Block Loot Tables
+885859ba0cc5666e3b39292cce6061859c66512c data\seamoon\loot_tables\blocks\seamoon_fence.json
+7c775b287c4fe4c32a7e98cce603720cd69ab582 data\seamoon\loot_tables\blocks\seamoon_pressure_plate.json
+e92ddf34f560995f8ef94cb736810e6986464386 data\seamoon\loot_tables\blocks\seamoon_stair.json
+f5c48a9a87c29cc6c487fc0ee0ce71f22a0618c6 data\seamoon\loot_tables\blocks\seamoon_block.json
+c13b67f56e06a431bb639ebde51590254b30ae1a data\seamoon\loot_tables\blocks\seamoon_slab.json
+72bae0a5dc78c7a3fc28b740e91ef3df95f0e599 data\seamoon\loot_tables\blocks\seamoon_door.json
+814c9c7b6c8f01516c90fe15731f68a197406293 data\seamoon\loot_tables\blocks\seamoon_wall.json
+1f680c56864bd17b1fa201ba25be1017011e344b data\seamoon\loot_tables\blocks\seamoon_trapdoor.json
+23fe6d5d93c110083fb9f9b00d2f4fd735259e53 data\seamoon\loot_tables\blocks\seamoon_button.json
+73b12630003065c4b1a891a700953b263c056ddb data\seamoon\loot_tables\blocks\seamoon_fence_gate.json

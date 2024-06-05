@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.midget807.seamoon.SeaMoonMain;
 import net.midget807.seamoon.block.seamoon.ExtractorBlock;
 import net.midget807.seamoon.block.seamoon.ModFluids;
+import net.midget807.seamoon.block.seamoon.SeaMoonSplatterBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
@@ -26,27 +27,27 @@ public class ModBlocks {
                     .liquid().
                     sounds(BlockSoundGroup.INTENTIONALLY_EMPTY)));
     public static final Block SEAMOON_BLOCK = registerBlock("seamoon_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.HONEY)));
     public static final Block SEAMOON_STAIR = registerBlock("seamoon_stair",
-            new StairsBlock(ModBlocks.SEAMOON_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+            new StairsBlock(ModBlocks.SEAMOON_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.HONEY)));
     public static final Block SEAMOON_SLAB = registerBlock("seamoon_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.HONEY)));
     public static final Block SEAMOON_FENCE = registerBlock("seamoon_fence",
-            new FenceBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.HONEY)));
     public static final Block SEAMOON_FENCE_GATE = registerBlock("seamoon_fence_gate",
-            new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE), WoodType.WARPED));
+            new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.HONEY), WoodType.WARPED));
     public static final Block SEAMOON_WALL = registerBlock("seamoon_wall",
-            new WallBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.HONEY)));
     public static final Block SEAMOON_BUTTON = registerBlock("seamoon_button",
-            new ButtonBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE), BlockSetType.WARPED, 10, true));
+            new ButtonBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.HONEY), BlockSetType.WARPED, 10, true));
     public static final Block SEAMOON_PRESSURE_PLATE = registerBlock("seamoon_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.SANDSTONE), BlockSetType.WARPED));
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.HONEY), BlockSetType.WARPED));
     public static final Block SEAMOON_DOOR = registerBlock("seamoon_door",
-            new DoorBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE).nonOpaque(), BlockSetType.WARPED));
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE).nonOpaque().sounds(BlockSoundGroup.HONEY), BlockSetType.WARPED));
     public static final Block SEAMOON_TRAPDOOR = registerBlock("seamoon_trapdoor",
-            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE).nonOpaque(), BlockSetType.WARPED));
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE).nonOpaque().sounds(BlockSoundGroup.HONEY), BlockSetType.WARPED));
     public static final Block SEAMOON_SPLATTER = registerBlock("seamoon_splatter",
-            new Block(FabricBlockSettings.copyOf(Blocks.LILY_PAD)));
+            new SeaMoonSplatterBlock(FabricBlockSettings.copyOf(Blocks.GLOW_LICHEN).sounds(BlockSoundGroup.HONEY)));
     public static final Block EXTRACTOR = registerBlock("extractor",
             new ExtractorBlock(FabricBlockSettings.copyOf(Blocks.DISPENSER)));
 
