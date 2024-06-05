@@ -9,6 +9,7 @@ import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -24,7 +25,28 @@ public class ModBlocks {
                     .dropsNothing()
                     .liquid().
                     sounds(BlockSoundGroup.INTENTIONALLY_EMPTY)));
-
+    public static final Block SEAMOON_BLOCK = registerBlock("seamoon_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block SEAMOON_STAIR = registerBlock("seamoon_stair",
+            new StairsBlock(ModBlocks.SEAMOON_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block SEAMOON_SLAB = registerBlock("seamoon_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block SEAMOON_FENCE = registerBlock("seamoon_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block SEAMOON_FENCE_GATE = registerBlock("seamoon_fence_gate",
+            new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE), WoodType.WARPED));
+    public static final Block SEAMOON_WALL = registerBlock("seamoon_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block SEAMOON_BUTTON = registerBlock("seamoon_button",
+            new ButtonBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE), BlockSetType.WARPED, 10, true));
+    public static final Block SEAMOON_PRESSURE_PLATE = registerBlock("seamoon_pressure_plate",
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.SANDSTONE), BlockSetType.WARPED));
+    public static final Block SEAMOON_DOOR = registerBlock("seamoon_door",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE).nonOpaque(), BlockSetType.WARPED));
+    public static final Block SEAMOON_TRAPDOOR = registerBlock("seamoon_trapdoor",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE).nonOpaque(), BlockSetType.WARPED));
+    public static final Block SEAMOON_SPLATTER = registerBlock("seamoon_splatter",
+            new Block(FabricBlockSettings.copyOf(Blocks.LILY_PAD)));
     public static final Block EXTRACTOR = registerBlock("extractor",
             new ExtractorBlock(FabricBlockSettings.copyOf(Blocks.DISPENSER)));
 
