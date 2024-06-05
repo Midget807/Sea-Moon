@@ -5,7 +5,7 @@
 //TODO mixin affection attribute modifying method into LivingEntity.class -- if (affection >= 10.0) {heart particle}
 //TODO mixin @Unique method to extract Sea Moon from living entities into GlassBottleItem.class if affection attribute >= 10.0f
 //TODO add icon for Affectionate status effect
-//TODO add Sea Moon blocks and block variant (eg. stairs and slabs) -- SoundEvents.PLACE/BREAK_HONEY_BLOCK
+//TODO add item texture for Sea Moon Door item
 //TODO add Sea Moon variant of all foods -- gives affectionate effect + normal actions
 //TODO add custom splash and lingering variant of Sea Moon Bottle -- !do not extend from Potion class!
 
