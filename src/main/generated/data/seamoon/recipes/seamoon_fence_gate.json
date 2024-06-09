@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "P": {
+      "item": "seamoon:seamoon_post"
+    },
+    "S": {
+      "item": "seamoon:seamoon_block"
+    }
+  },
+  "pattern": [
+    "PSP",
+    "PSP"
+  ],
+  "result": {
+    "item": "seamoon:seamoon_fence_gate"
+  },
+  "show_notification": true
+}
