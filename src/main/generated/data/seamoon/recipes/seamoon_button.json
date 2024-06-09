@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "seamoon:seamoon_button"
+    }
+  ],
+  "result": {
+    "item": "seamoon:seamoon_button"
+  }
+}
