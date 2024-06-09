@@ -21,7 +21,7 @@ public class SeaMoonSplatterBlock extends MultiFaceBlock {
     private static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     public SeaMoonSplatterBlock(Settings settings) {
         super(settings);
-        this.setDefaultState(this.getDefaultState());
+        this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false));
     }
 
     @Override

@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.midget807.seamoon.SeaMoonMain;
 import net.midget807.seamoon.block.seamoon.ExtractorBlock;
 import net.midget807.seamoon.block.seamoon.ModFluids;
+import net.midget807.seamoon.block.seamoon.PostBlock;
 import net.midget807.seamoon.block.seamoon.SeaMoonSplatterBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
@@ -32,6 +33,8 @@ public class ModBlocks {
             new StairsBlock(ModBlocks.SEAMOON_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.HONEY)));
     public static final Block SEAMOON_SLAB = registerBlock("seamoon_slab",
             new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.HONEY)));
+    public static final Block SEAMOON_POST = registerBlock("seamoon_post",
+            new PostBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.HONEY)));
     public static final Block SEAMOON_FENCE = registerBlock("seamoon_fence",
             new FenceBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.HONEY)));
     public static final Block SEAMOON_FENCE_GATE = registerBlock("seamoon_fence_gate",
@@ -47,7 +50,7 @@ public class ModBlocks {
     public static final Block SEAMOON_TRAPDOOR = registerBlock("seamoon_trapdoor",
             new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE).nonOpaque().sounds(BlockSoundGroup.HONEY), BlockSetType.WARPED));
     public static final Block SEAMOON_SPLATTER = registerBlock("seamoon_splatter",
-            new SeaMoonSplatterBlock(FabricBlockSettings.copyOf(Blocks.GLOW_LICHEN).sounds(BlockSoundGroup.HONEY).noCollision().pistonBehavior(PistonBehavior.DESTROY)));
+            new SeaMoonSplatterBlock(FabricBlockSettings.copyOf(Blocks.GLOW_LICHEN).sounds(BlockSoundGroup.HONEY).nonOpaque().noCollision().pistonBehavior(PistonBehavior.DESTROY).luminance(0)));
     public static final Block EXTRACTOR = registerBlock("extractor",
             new ExtractorBlock(FabricBlockSettings.copyOf(Blocks.DISPENSER)));
 
