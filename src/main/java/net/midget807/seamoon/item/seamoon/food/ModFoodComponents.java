@@ -1,4 +1,4 @@
-package net.midget807.seamoon.item.seamoon;
+package net.midget807.seamoon.item.seamoon.food;
 
 import net.midget807.seamoon.effect.ModEffects;
 import net.minecraft.entity.effect.StatusEffectInstance;

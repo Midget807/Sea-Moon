@@ -32,7 +32,6 @@ public class ModItemGroups {
                 entries.add(ModBlocks.SEAMOON_TRAPDOOR);
                 entries.add(ModBlocks.SEAMOON_PRESSURE_PLATE);
                 entries.add(ModBlocks.SEAMOON_BUTTON);
-                entries.add(ModBlocks.EXTRACTOR); //Maybe
 
             }))
             .build());
