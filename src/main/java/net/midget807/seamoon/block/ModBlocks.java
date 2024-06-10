@@ -3,7 +3,6 @@ package net.midget807.seamoon.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.midget807.seamoon.SeaMoonMain;
-import net.midget807.seamoon.block.seamoon.ExtractorBlock;
 import net.midget807.seamoon.block.seamoon.ModFluids;
 import net.midget807.seamoon.block.seamoon.PostBlock;
 import net.midget807.seamoon.block.seamoon.SeaMoonSplatterBlock;
@@ -11,7 +10,6 @@ import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -51,8 +49,6 @@ public class ModBlocks {
             new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE).nonOpaque().sounds(BlockSoundGroup.HONEY), BlockSetType.WARPED));
     public static final Block SEAMOON_SPLATTER = registerBlock("seamoon_splatter",
             new SeaMoonSplatterBlock(FabricBlockSettings.copyOf(Blocks.GLOW_LICHEN).sounds(BlockSoundGroup.HONEY).nonOpaque().noCollision().pistonBehavior(PistonBehavior.DESTROY).luminance(0)));
-    public static final Block EXTRACTOR = registerBlock("extractor",
-            new ExtractorBlock(FabricBlockSettings.copyOf(Blocks.DISPENSER)));
 
     public static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
