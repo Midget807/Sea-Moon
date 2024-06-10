@@ -2,7 +2,6 @@ package net.midget807.seamoon;
 
 import net.fabricmc.api.ModInitializer;
 import net.midget807.seamoon.block.ModBlocks;
-import net.midget807.seamoon.block.seamoon.entity.ModBlockEntities;
 import net.midget807.seamoon.item.ModItemGroups;
 import net.midget807.seamoon.item.ModItems;
 import net.midget807.seamoon.network.ModMessages;
