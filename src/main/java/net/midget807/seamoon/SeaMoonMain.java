@@ -20,7 +20,6 @@ public class SeaMoonMain implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
-		ModBlockEntities.registerModBlockEntities();
 		ModItemGroups.registerModItemGroups();
 		ModMessages.registerC2SPackets();
 		LOGGER.info("Hello Fabric world!");
