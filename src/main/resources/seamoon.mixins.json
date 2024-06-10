@@ -4,7 +4,10 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "server.GlassBottleMixin",
-    "server.LivingEntityMixin"
+    "server.IronGolemEntityMixin",
+    "server.MobEntityMixin",
+    "server.SnowGolemEntityMixin",
+    "server.VillagerEntityMixin"
   ],
   "client": [],
   "injectors": {
