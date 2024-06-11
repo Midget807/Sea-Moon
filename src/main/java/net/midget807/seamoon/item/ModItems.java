@@ -26,7 +26,7 @@ public class ModItems {
     public static final Item GLAZED_COD = registerItem("glazed_cod", new Item(new FabricItemSettings().food(ModFoodComponents.GLAZED_COD)));
     public static final Item GLAZED_COOKED_BEEF = registerItem("glazed_cooked_beef", new Item(new FabricItemSettings().food(ModFoodComponents.GLAZED_COOKED_BEEF)));
     public static final Item GLAZED_COOKED_CHICKEN = registerItem("glazed_cooked_chicken", new Item(new FabricItemSettings().food(ModFoodComponents.GLAZED_COOKED_CHICKEN)));
-    public static final Item GLAZED_COOKED_COD = registerItem("glazed_cod", new Item(new FabricItemSettings().food(ModFoodComponents.GLAZED_COOKED_COD)));
+    public static final Item GLAZED_COOKED_COD = registerItem("glazed_cooked_cod", new Item(new FabricItemSettings().food(ModFoodComponents.GLAZED_COOKED_COD)));
     public static final Item GLAZED_COOKED_MUTTON = registerItem("glazed_cooked_mutton", new Item(new FabricItemSettings().food(ModFoodComponents.GLAZED_COOKED_MUTTON)));
     public static final Item GLAZED_COOKED_PORKCHOP = registerItem("glazed_cooked_porkchop", new Item(new FabricItemSettings().food(ModFoodComponents.GLAZED_COOKED_PORKCHOP)));
     public static final Item GLAZED_COOKED_RABBIT = registerItem("glazed_cooked_rabbit", new Item(new FabricItemSettings().food(ModFoodComponents.GLAZED_COOKED_RABBIT)));
