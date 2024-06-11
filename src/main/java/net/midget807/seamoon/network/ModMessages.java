@@ -8,7 +8,7 @@ import net.minecraft.util.Identifier;
 public class ModMessages {
     public static Identifier AFFECTION_SPAWN_ID = SeaMoonMain.id("affection_spawn");
     public static void registerC2SPackets() {
-        ServerPlayNetworking.registerGlobalReceiver(AFFECTION_SPAWN_ID, AffectionSpawnPacket::receive);
+
     }
     public static void registerS2CPackets() {
 
