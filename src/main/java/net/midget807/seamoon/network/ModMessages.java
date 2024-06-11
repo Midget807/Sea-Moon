@@ -1,8 +1,6 @@
 package net.midget807.seamoon.network;
 
-import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.midget807.seamoon.SeaMoonMain;
-import net.midget807.seamoon.network.C2S.AffectionSpawnPacket;
 import net.minecraft.util.Identifier;
 
 public class ModMessages {
