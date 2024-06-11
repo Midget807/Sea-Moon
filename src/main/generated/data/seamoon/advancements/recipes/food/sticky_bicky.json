@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_glazed_cookie": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "seamoon:glazed_cookie"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_seamoon_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "seamoon:seamoon_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:sticky_bicky"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_seamoon_block",
+      "has_glazed_cookie"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:sticky_bicky"
+    ]
+  },
+  "sends_telemetry_event": false
+}

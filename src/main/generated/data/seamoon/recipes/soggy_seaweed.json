@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": {
+      "item": "seamoon:glazed_dried_kelp"
+    },
+    "S": {
+      "item": "seamoon:seamoon_block"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SKS",
+    "SSS"
+  ],
+  "result": {
+    "item": "seamoon:soggy_seaweed"
+  },
+  "show_notification": true
+}

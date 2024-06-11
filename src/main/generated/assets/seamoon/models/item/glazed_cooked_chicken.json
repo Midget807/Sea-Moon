@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "seamoon:item/glazed_cooked_chicken"
+  }
+}

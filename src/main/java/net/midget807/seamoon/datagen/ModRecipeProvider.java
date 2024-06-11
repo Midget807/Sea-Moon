@@ -8,7 +8,6 @@ import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.*;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
-import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
 
@@ -100,6 +99,35 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModBlocks.SEAMOON_BLOCK), conditionsFromItem(ModBlocks.SEAMOON_BLOCK))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SEAMOON_BUTTON)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.STICKY_BICKY, 1)
+                .pattern("SSS")
+                .pattern("SCS")
+                .pattern("SSS")
+                .input('S', ModBlocks.SEAMOON_BLOCK)
+                .input('C', ModItems.GLAZED_COOKIE)
+                .criterion(hasItem(ModBlocks.SEAMOON_BLOCK), conditionsFromItem(ModBlocks.SEAMOON_BLOCK))
+                .criterion(hasItem(ModItems.GLAZED_COOKIE), conditionsFromItem(ModItems.GLAZED_COOKIE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.STICKY_BICKY)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.SOGGY_SEAWEED, 1)
+                .pattern("SSS")
+                .pattern("SKS")
+                .pattern("SSS")
+                .input('S', ModBlocks.SEAMOON_BLOCK)
+                .input('K', ModItems.GLAZED_DRIED_KELP)
+                .criterion(hasItem(ModBlocks.SEAMOON_BLOCK), conditionsFromItem(ModBlocks.SEAMOON_BLOCK))
+                .criterion(hasItem(ModItems.GLAZED_DRIED_KELP), conditionsFromItem(ModItems.GLAZED_DRIED_KELP))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.SOGGY_SEAWEED)));
+
+        createGlazedFoodRecipe(exporter, Items.APPLE, ModItems.GLAZED_APPLE);
+        createGlazedFoodRecipe(exporter, Items.BAKED_POTATO, ModItems.GLAZED_BAKED_POTATO);
+    }
+    private void createGlazedFoodRecipe(RecipeExporter exporter, ItemConvertible baseFood, ItemConvertible output) {
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, output, 1)
+                .input(baseFood)
+                .input(ModItems.SEAMOON_BOTTLE)
+                .criterion(hasItem(baseFood), conditionsFromItem(baseFood))
+                .criterion(hasItem(ModItems.SEAMOON_BOTTLE), conditionsFromItem(ModItems.SEAMOON_BOTTLE))
+                .offerTo(exporter);
     }
 }

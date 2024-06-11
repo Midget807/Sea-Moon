@@ -60,7 +60,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GLAZED_ENCHANTED_GOLDEN_APPLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GLAZED_GOLDEN_APPLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GLAZED_GOLDEN_CARROT, Models.GENERATED);
-        itemModelGenerator.register(ModItems.GLAZED_APPLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GLAZED_HONEY_BOTTLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GLAZED_MELON_SLICE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GLAZED_MUSHROOM_STEW, Models.GENERATED);
