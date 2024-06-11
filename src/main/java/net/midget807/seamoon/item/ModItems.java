@@ -15,7 +15,7 @@ public class ModItems {
 
     //Glazed Foods
     public static final Item GLAZED_APPLE = registerItem("glazed_apple", new Item(new FabricItemSettings().food(ModFoodComponents.GLAZED_APPLE)));
-    public static final Item GLAZED_BAKED_POTATO = registerItem("glazed_", new Item(new FabricItemSettings().food(ModFoodComponents.GLAZED_BAKED_POTATO)));
+    public static final Item GLAZED_BAKED_POTATO = registerItem("glazed_baked_potato", new Item(new FabricItemSettings().food(ModFoodComponents.GLAZED_BAKED_POTATO)));
     public static final Item GLAZED_BEEF = registerItem("glazed_beef", new Item(new FabricItemSettings().food(ModFoodComponents.GLAZED_BEEF)));
     public static final Item GLAZED_BEETROOT = registerItem("glazed_beetroot", new Item(new FabricItemSettings().food(ModFoodComponents.GLAZED_BEETROOT)));
     public static final Item GLAZED_BEETROOT_SOUP = registerItem("glazed_beetroot_soup", new Item(new FabricItemSettings().food(ModFoodComponents.GLAZED_BEETROOT_SOUP)));
