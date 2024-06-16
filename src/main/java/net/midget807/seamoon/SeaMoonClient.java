@@ -12,6 +12,7 @@ public class SeaMoonClient implements ClientModInitializer {
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SEAMOON_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SEAMOON_TRAPDOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SEAMOON_SPLATTER, RenderLayer.getCutout());
         ModMessages.registerS2CPackets();
     }
 }

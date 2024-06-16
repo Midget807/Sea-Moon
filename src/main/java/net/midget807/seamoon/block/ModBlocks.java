@@ -48,7 +48,7 @@ public class ModBlocks {
     public static final Block SEAMOON_TRAPDOOR = registerBlock("seamoon_trapdoor",
             new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE).nonOpaque().sounds(BlockSoundGroup.HONEY), BlockSetType.WARPED));
     public static final Block SEAMOON_SPLATTER = registerBlock("seamoon_splatter",
-            new SeaMoonSplatterBlock(FabricBlockSettings.copyOf(Blocks.GLOW_LICHEN).sounds(BlockSoundGroup.HONEY).nonOpaque().noCollision().pistonBehavior(PistonBehavior.DESTROY).luminance(0)));
+            new SeaMoonSplatterBlock(FabricBlockSettings.copyOf(Blocks.GLOW_LICHEN).sounds(BlockSoundGroup.HONEY).replaceable().noCollision().pistonBehavior(PistonBehavior.DESTROY).luminance(0)));
 
     public static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
