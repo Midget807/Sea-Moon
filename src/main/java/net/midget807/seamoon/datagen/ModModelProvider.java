@@ -35,8 +35,8 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(ModItems.SEAMOON_BOTTLE, Items.HONEY_BOTTLE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SEAMOON_BUCKET, Items.MILK_BUCKET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SEAMOON_BOTTLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SEAMOON_BUCKET, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.GLAZED_APPLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GLAZED_BAKED_POTATO, Models.GENERATED);
@@ -80,5 +80,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GLAZED_TROPICAL_FISH, Models.GENERATED);
         itemModelGenerator.register(ModItems.STICKY_BICKY, Models.GENERATED);
         itemModelGenerator.register(ModItems.SOGGY_SEAWEED, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CREAM_PIE, Models.GENERATED);
     }
 }
