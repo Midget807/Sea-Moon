@@ -1,13 +1,6 @@
-//TODO fix extractor block or mixin dispenser behavior
-//TODO fix bucket pickup, bucket drinking, bottle drinking sounds -- SoundEvents.BREAK_HONEY_BLOCK, DRINK_HONEY, DRINK_HONEY
 //TODO fix Sea Moon Fluid + texture
-//TODO fix Sea Moon Splatter 
-//TODO mixin affection attribute into LivingEntity.class -- ref. archived Elementals code
-//TODO mixin affection attribute modifying method into LivingEntity.class -- if (affection >= 10.0) {heart particle}
-//TODO mixin @Unique method to extract Sea Moon from living entities into GlassBottleItem.class if affection attribute >= 10.0f
 //TODO add icon for Affectionate status effect
 //TODO add item texture for Sea Moon Door item
-//TODO add Sea Moon variant of all foods -- gives affectionate effect + normal actions
 //TODO add custom splash and lingering variant of Sea Moon Bottle -- !do not extend from Potion class!
 
 //Farmer's delight is deprecated
