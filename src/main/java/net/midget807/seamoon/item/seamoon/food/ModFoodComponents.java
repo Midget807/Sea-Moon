@@ -462,6 +462,28 @@ public class ModFoodComponents {
                     1.0f
             )
             .build();
+    public static final FoodComponent CREAM_PIE = new FoodComponent.Builder()
+            .hunger(FoodComponents.PUMPKIN_PIE.getHunger())
+            .saturationModifier(FoodComponents.PUMPKIN_PIE.getSaturationModifier())
+            .statusEffect(new StatusEffectInstance(
+                    ModEffects.AFFECTIONATE,
+                    FoodComponents.PUMPKIN_PIE.getHunger() * 20 * 30,
+                    0),
+                    1.0f
+            )
+            .statusEffect(new StatusEffectInstance(
+                    StatusEffects.NAUSEA,
+                    FoodComponents.PUMPKIN_PIE.getHunger() * 20 * 30,
+                    0),
+                    1.0f
+            )
+            .statusEffect(new StatusEffectInstance(
+                    StatusEffects.DARKNESS,
+                    FoodComponents.PUMPKIN_PIE.getHunger() * 20 * 30,
+                    0),
+                    1.0f
+            )
+            .build();
 
 
 }

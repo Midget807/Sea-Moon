@@ -119,8 +119,56 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.GLAZED_DRIED_KELP), conditionsFromItem(ModItems.GLAZED_DRIED_KELP))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.SOGGY_SEAWEED)));
 
-        createGlazedFoodRecipe(exporter, Items.APPLE, ModItems.GLAZED_APPLE);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CREAM_PIE, 1)
+                .pattern("SSS")
+                .pattern("SPS")
+                .pattern("SSS")
+                .input('S', ModBlocks.SEAMOON_BLOCK)
+                .input('P', ModItems.GLAZED_PUMPKIN_PIE)
+                .criterion(hasItem(ModBlocks.SEAMOON_BLOCK), conditionsFromItem(ModBlocks.SEAMOON_BLOCK))
+                .criterion(hasItem(ModItems.GLAZED_PUMPKIN_PIE), conditionsFromItem(ModItems.GLAZED_PUMPKIN_PIE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.GLAZED_PUMPKIN_PIE)));
+
+        createGlazedFoodRecipe(exporter, Items.APPLE, ModItems.GLAZED_APPLE); //TODO Update all output items for standard glazing recipes
         createGlazedFoodRecipe(exporter, Items.BAKED_POTATO, ModItems.GLAZED_BAKED_POTATO);
+        createGlazedFoodRecipe(exporter, Items.BEEF, ModItems.GLAZED_BEEF);
+        createGlazedFoodRecipe(exporter, Items.BEETROOT, ModItems.GLAZED_BEETROOT);
+        createGlazedFoodRecipe(exporter, Items.BEETROOT_SOUP, ModItems.GLAZED_BEETROOT_SOUP);
+        createGlazedFoodRecipe(exporter, Items.BREAD, ModItems.GLAZED_BREAD);
+        createGlazedFoodRecipe(exporter, Items.CARROT, ModItems.GLAZED_CARROT);
+        createGlazedFoodRecipe(exporter, Items.CHICKEN, ModItems.GLAZED_CHICKEN);
+        createGlazedFoodRecipe(exporter, Items.CHORUS_FRUIT, ModItems.GLAZED_CHORUS_FRUIT);
+        createGlazedFoodRecipe(exporter, Items.COD, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.COOKED_BEEF, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.COOKED_CHICKEN, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.COOKED_COD, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.COOKED_MUTTON, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.COOKED_PORKCHOP, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.COOKED_RABBIT, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.COOKED_SALMON, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.COOKIE, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.DRIED_KELP, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.ENCHANTED_GOLDEN_APPLE, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.GOLDEN_APPLE, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.GOLDEN_CARROT, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.HONEY_BOTTLE, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.MELON_SLICE, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.MUSHROOM_STEW, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.MUTTON, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.POISONOUS_POTATO, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.PORKCHOP, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.POTATO, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.PUFFERFISH, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.PUMPKIN_PIE, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.RABBIT, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.RABBIT_STEW, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.ROTTEN_FLESH, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.SALMON, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.SPIDER_EYE, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.SUSPICIOUS_STEW, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.SWEET_BERRIES, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.GLOW_BERRIES, ModItems.GLAZED_COD);
+        createGlazedFoodRecipe(exporter, Items.TROPICAL_FISH, ModItems.GLAZED_TROPICAL_FISH);
     }
     private void createGlazedFoodRecipe(RecipeExporter exporter, ItemConvertible baseFood, ItemConvertible output) {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, output, 1)
