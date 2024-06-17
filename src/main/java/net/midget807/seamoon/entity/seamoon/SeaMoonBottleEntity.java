@@ -13,6 +13,8 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.*;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.nbt.NbtElement;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionUtil;
 import net.minecraft.potion.Potions;
@@ -123,8 +125,14 @@ public class SeaMoonBottleEntity extends ThrownItemEntity implements FlyingItemE
         areaEffectCloudEntity.setRadiusOnUse(-0.5f);
         areaEffectCloudEntity.setWaitTime(10);
         areaEffectCloudEntity.setPotion(potion);
-        areaEffectCloudEntity.setRadiusGrowth(-areaEffectCloudEntity.getRadius() / (float)areaEffectCloudEntity.getDuration());
-        areaEffectCloudEntity.addEffect(new StatusEffectInstance(ModEffects.AFFECTIONATE, 10, 0));
+        areaEffectCloudEntity.setRadiusGrowth(-areaEffectCloudEntity.getRadius() / (float) areaEffectCloudEntity.getDuration());
+        for (StatusEffectInstance statusEffectInstance : PotionUtil.getCustomPotionEffects(itemStack)) {
+            areaEffectCloudEntity.addEffect(new StatusEffectInstance(statusEffectInstance));
+        }
+        NbtCompound nbtCompound = itemStack.getNbt();
+        if (nbtCompound != null && nbtCompound.contains("CustomPotionColor", NbtElement.NUMBER_TYPE)) {
+            areaEffectCloudEntity.setColor(nbtCompound.getInt("CustomPotionColor"));
+        }
         this.getWorld().spawnEntity(areaEffectCloudEntity);
     }
 
