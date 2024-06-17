@@ -1,7 +1,9 @@
 {
   "itemGroup.seamoon.seamoon": "Sea Moon",
 
-  "item.seamoon.seamoon_bottle": "Bottle of Sea Moon",
+  "item.seamoon.seamoon_bottle.effect.affection": "Bottle of Sea Moon",
+  "item.seamoon.splash_seamoon_bottle.effect.affection": "Bottle of Sea Moon",
+  "item.seamoon.lingering_seamoon_bottle.effect.affection": "Bottle of Sea Moon",
   "item.seamoon.seamoon_bucket": "Bucket of Sea Moon",
 
   "effect.seamoon.affectionate": "Affectionate",
@@ -18,9 +20,6 @@
   "block.seamoon.seamoon_door": "Sea Moon Door",
   "block.seamoon.seamoon_trapdoor": "Sea Moon Trapdoor",
   "block.seamoon.seamoon_splatter": "Sea Moon Splatter",
-  "block.seamoon.extractor": "Extractor",
-
-  "container.seamoon.extractor": "Extractor",
 
   "death.attack.seamoon.bucket_death.message": "%1$s be-came one with the seed ∽▶"
 }

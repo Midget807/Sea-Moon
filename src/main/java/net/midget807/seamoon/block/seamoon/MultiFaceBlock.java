@@ -105,13 +105,18 @@ public class MultiFaceBlock extends Block {
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return this.SHAPES.get(state);
     }
-
+    public static boolean caBePlacedOn(BlockView world, Direction direction, BlockPos pos, BlockState state) {
+        return Block.isFaceFullSquare(state.getSidesShape(world, pos), direction.getOpposite()) || Block.isFaceFullSquare(state.getCollisionShape(world, pos), direction.getOpposite());
+    }
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         boolean bl = false;
         for (Direction direction : DIRECTIONS) {
             if (!MultiFaceBlock.hasDirection(state, direction)) continue;
             BlockPos blockPos = pos.offset(direction);
+            if (!MultifaceGrowthBlock.canGrowOn(world, direction, blockPos, world.getBlockState(blockPos))) {
+                return false;
+            }
             bl = true;
         }
         return bl;
@@ -128,13 +133,14 @@ public class MultiFaceBlock extends Block {
         World world = ctx.getWorld();
         BlockPos blockPos = ctx.getBlockPos();
         BlockState blockState = world.getBlockState(blockPos);
-        return (BlockState) Arrays.stream(ctx.getPlacementDirections()).map(direction -> this.withDirection(blockState, world, blockPos, (Direction)direction)).filter(Objects::nonNull).findFirst().orElse(null);
+        return Arrays.stream(ctx.getPlacementDirections()).map(direction -> this.withDirection(blockState, world, blockPos, direction)).filter(Objects::nonNull).findFirst().orElse(null);
 
     }
+    @Nullable
+    public BlockState withDirection(BlockState state, World world, BlockPos blockPos, Direction direction) {
 
-    private Object withDirection(BlockState state, World world, BlockPos blockPos, Direction direction) {
         BlockState blockState = state.isOf(this) ? state : (this.isWaterlogged() && state.getFluidState().isEqualAndStill(Fluids.WATER) ? (BlockState)this.getDefaultState().with(Properties.WATERLOGGED, true) : this.getDefaultState());
-        return (BlockState)blockState.with(MultiFaceBlock.getProperty(direction), true);
+        return blockState.with(MultiFaceBlock.getProperty(direction), true);
     }
 
     @Override
@@ -170,11 +176,11 @@ public class MultiFaceBlock extends Block {
     }
 
     private static boolean isNotFullBlock(BlockState state) {
-        return Arrays.stream(DIRECTIONS).anyMatch(direction -> MultiFaceBlock.hasDirection(state, direction));
+        return Arrays.stream(DIRECTIONS).anyMatch(direction -> !MultiFaceBlock.hasDirection(state, direction));
     }
 
     private static boolean hasAnyDirection(BlockState state) {
-        return Arrays.stream(DIRECTIONS).anyMatch(direction -> !MultiFaceBlock.hasDirection(state, direction));
+        return Arrays.stream(DIRECTIONS).anyMatch(direction -> MultiFaceBlock.hasDirection(state, direction));
     }
 
     private static BlockState disableDirection(BlockState state, BooleanProperty direction) {
@@ -185,12 +191,12 @@ public class MultiFaceBlock extends Block {
         return Blocks.AIR.getDefaultState();
     }
 
-    private static BooleanProperty getProperty(Direction direction) {
+    public static BooleanProperty getProperty(Direction direction) {
         return FACING_PROPERTIES.get(direction);
     }
 
     private static boolean hasDirection(BlockState state, Direction direction) {
-        BooleanProperty booleanProperty = (BooleanProperty) MultiFaceBlock.getProperty(direction);
+        BooleanProperty booleanProperty = MultiFaceBlock.getProperty(direction);
         return state.contains(booleanProperty) && state.get(booleanProperty) != false;
     }
 

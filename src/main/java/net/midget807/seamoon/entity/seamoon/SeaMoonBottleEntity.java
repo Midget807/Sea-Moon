@@ -1,22 +1,22 @@
 package net.midget807.seamoon.entity.seamoon;
 
 import net.midget807.seamoon.block.ModBlocks;
+import net.midget807.seamoon.block.seamoon.MultiFaceBlock;
 import net.midget807.seamoon.block.seamoon.SeaMoonSplatterBlock;
 import net.midget807.seamoon.effect.ModEffects;
 import net.midget807.seamoon.entity.ModEntityTypes;
 import net.midget807.seamoon.item.ModItems;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.ConnectingBlock;
 import net.minecraft.entity.*;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.item.PotionItem;
+import net.minecraft.item.*;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionUtil;
 import net.minecraft.potion.Potions;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
@@ -27,7 +27,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldEvents;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
+import java.util.*;
 
 public class SeaMoonBottleEntity extends ThrownItemEntity implements FlyingItemEntity {
     public SeaMoonBottleEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
@@ -38,7 +38,7 @@ public class SeaMoonBottleEntity extends ThrownItemEntity implements FlyingItemE
         super(ModEntityTypes.SPLASH_SEAMOON_BOTTLE_ENTITY_TYPE, x, y, z, world);
     }
 
-    public SeaMoonBottleEntity(LivingEntity owner, World world) {
+    public SeaMoonBottleEntity(World world, LivingEntity owner) {
         super(ModEntityTypes.SPLASH_SEAMOON_BOTTLE_ENTITY_TYPE, owner, world);
     }
 
@@ -61,7 +61,10 @@ public class SeaMoonBottleEntity extends ThrownItemEntity implements FlyingItemE
         ItemStack itemStack = this.getStack();
         Direction direction = blockHitResult.getSide();
         BlockPos blockPos = blockHitResult.getBlockPos();
-        this.getWorld().setBlockState(blockPos, ModBlocks.SEAMOON_SPLATTER.getDefaultState());
+        BlockPos blockPos2 = blockPos.offset(direction);
+        BlockState stateInBlock = this.getWorld().getBlockState(blockPos2);
+        BlockState state = stateInBlock.isOf(ModBlocks.SEAMOON_SPLATTER) ? stateInBlock : ModBlocks.SEAMOON_SPLATTER.getDefaultState();
+        this.getWorld().setBlockState(blockPos2, state.with(MultiFaceBlock.getProperty(direction.getOpposite()), true));
     }
 
     @Override
@@ -72,14 +75,18 @@ public class SeaMoonBottleEntity extends ThrownItemEntity implements FlyingItemE
             return;
         }
         ItemStack itemStack = this.getStack();
-        Potion potion = Potions.SLOW_FALLING;
-        if (this.isLingering()) {
-            this.applyLingeringPotion(itemStack, potion);
-        } else {
-            this.applySplashPotion((List<StatusEffectInstance>) ModEffects.AFFECTIONATE, hitResult.getType() == HitResult.Type.ENTITY ? ((EntityHitResult) hitResult).getEntity() : null);
+        Potion potion = PotionUtil.getPotion(itemStack);
+        List<StatusEffectInstance> list = PotionUtil.getPotionEffects(itemStack);
+        if (!list.isEmpty()) {
+            if (this.isLingering()) {
+                this.applyLingeringPotion(itemStack, potion);
+            } else {
+                this.applySplashPotion(list, hitResult.getType() == HitResult.Type.ENTITY ? ((EntityHitResult) hitResult).getEntity() : null);
+            }
         }
         int i = potion.hasInstantEffect() ? WorldEvents.INSTANT_SPLASH_POTION_SPLASHED : WorldEvents.SPLASH_POTION_SPLASHED;
         this.getWorld().syncWorldEvent(i, this.getBlockPos(), PotionUtil.getColor(itemStack));
+        this.discard();
     }
 
     private void applySplashPotion(List<StatusEffectInstance> statusEffects, @Nullable Entity entity) {
@@ -98,7 +105,7 @@ public class SeaMoonBottleEntity extends ThrownItemEntity implements FlyingItemE
                         continue;
                     }
                     int i2 = statusEffectInstance.mapDuration(i -> (int) (e * (double) i + 0.5));
-                    StatusEffectInstance statusEffectInstance2 = new StatusEffectInstance(statusEffect);
+                    StatusEffectInstance statusEffectInstance2 = new StatusEffectInstance(statusEffect, i2);
                     if (statusEffectInstance2.isDurationBelow(20)) continue;
                     livingEntity.addStatusEffect(statusEffectInstance2, entity2);
                 }
@@ -118,6 +125,7 @@ public class SeaMoonBottleEntity extends ThrownItemEntity implements FlyingItemE
         areaEffectCloudEntity.setPotion(potion);
         areaEffectCloudEntity.setRadiusGrowth(-areaEffectCloudEntity.getRadius() / (float)areaEffectCloudEntity.getDuration());
         areaEffectCloudEntity.addEffect(new StatusEffectInstance(ModEffects.AFFECTIONATE, 10, 0));
+        this.getWorld().spawnEntity(areaEffectCloudEntity);
     }
 
     private boolean isLingering() {

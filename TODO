@@ -1,6 +1,6 @@
 //TODO fix Sea Moon Fluid + texture
 //TODO add icon for Affectionate status effect
 //TODO add item texture for Sea Moon Door item
-//TODO add custom splash and lingering variant of Sea Moon Bottle -- !do not extend from Potion class!
+//TODO fix item output for seamoon extractions
 
 //Farmer's delight is deprecated

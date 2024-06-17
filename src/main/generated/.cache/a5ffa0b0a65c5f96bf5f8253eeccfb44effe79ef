@@ -1,4 +1,4 @@
-// 1.20.2	2024-06-17T16:24:01.7319931	Sea Moon/Recipes
+// 1.20.2	2024-06-17T18:02:08.8859964	Sea Moon/Recipes
 a67030db3c6b4732f66354b4360d1f39523a7f07 data\seamoon\advancements\recipes\food\glazed_cooked_porkchop.json
 61530c1134f9b8eebc95543e65f04c6bcb1e1adb data\seamoon\advancements\recipes\building_blocks\seamoon_fence_gate.json
 8f8b6838db863c29c58263c8fea16b76d598eba3 data\seamoon\recipes\glazed_suspicious_stew.json
@@ -11,8 +11,8 @@ a67030db3c6b4732f66354b4360d1f39523a7f07 data\seamoon\advancements\recipes\food\
 a3566e1c3bcb8a5f026d8a0a1ed005eb84747322 data\seamoon\advancements\recipes\food\glazed_cooked_mutton.json
 7ab0ac46b66ba435469cfd939f9eefc72140fce5 data\seamoon\recipes\glazed_spider_eye.json
 6ff8727e4c8097ade70d184b996deed6d49b036a data\seamoon\recipes\glazed_pumpkin_pie.json
-17b4d8a0e743626e8f6429a0def4ba21a6217654 data\seamoon\recipes\soggy_seaweed.json
 67d16568660f70b1bea4856187a78e470f509ac3 data\seamoon\advancements\recipes\building_blocks\seamoon_button.json
+17b4d8a0e743626e8f6429a0def4ba21a6217654 data\seamoon\recipes\soggy_seaweed.json
 826d18d7f6748c9112996673422ad39596426c31 data\seamoon\recipes\glazed_cooked_mutton.json
 d54100d037d3925a406095cdc6a9a7671b8bf6d8 data\seamoon\recipes\glazed_pufferfish.json
 a15050a6011f217c8d28ebb2320f4b118260df46 data\seamoon\advancements\recipes\food\glazed_dried_kelp.json
@@ -86,8 +86,8 @@ a114a109b717ff9619c202c29113032e811123b6 data\seamoon\recipes\seamoon_fence.json
 d244f0cc0297fea893ff9cbf7a03a9f023f695bb data\seamoon\recipes\seamoon_stair.json
 38acd2b5153975b940ee7536cb65915ac4eabd64 data\seamoon\recipes\glazed_beetroot.json
 25de0e4100c196d12400d7b7c403a92ae17c8f88 data\seamoon\advancements\recipes\food\glazed_porkchop.json
-72cb8328e8f826fb1989de4451f7f2c266e02aa4 data\seamoon\recipes\glazed_apple.json
 942f3e7250ee81681750124a7bbba8036895cdc2 data\seamoon\advancements\recipes\food\cream_pie.json
+72cb8328e8f826fb1989de4451f7f2c266e02aa4 data\seamoon\recipes\glazed_apple.json
 660f7e6f27b4586d0d7147d0b4485ffb31303bde data\seamoon\advancements\recipes\food\glazed_sweet_berries.json
 4d0e2366fa7b183c25395a9a2293f8931b5ea018 data\seamoon\recipes\glazed_rotten_flesh.json
 7e3fca131dd16171b9633159cce19fb5e08d1856 data\seamoon\advancements\recipes\building_blocks\seamoon_slab.json

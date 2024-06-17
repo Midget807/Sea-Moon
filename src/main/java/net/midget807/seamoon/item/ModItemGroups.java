@@ -5,14 +5,17 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.midget807.seamoon.SeaMoonMain;
 import net.midget807.seamoon.block.ModBlocks;
+import net.midget807.seamoon.effect.seamoon.potion.ModPotions;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.potion.PotionUtil;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 
 public class ModItemGroups {
@@ -20,8 +23,10 @@ public class ModItemGroups {
             .displayName(Text.translatable("itemGroup.seamoon.seamoon"))
             .icon(() -> new ItemStack(ModItems.SEAMOON_BOTTLE))
             .entries(((displayContext, entries) -> {
-                entries.add(ModItems.SEAMOON_BOTTLE);
                 entries.add(ModItems.SEAMOON_BUCKET);
+                entries.add(PotionUtil.setPotion(ModItems.SEAMOON_BOTTLE.getDefaultStack(), ModPotions.AFFECTION));
+                entries.add(PotionUtil.setPotion(ModItems.SPLASH_SEAMOON_BOTTLE.getDefaultStack(), ModPotions.AFFECTION));
+                entries.add(PotionUtil.setPotion(ModItems.LINGERING_SEAMOON_BOTTLE.getDefaultStack(), ModPotions.AFFECTION));
                 entries.add(ModBlocks.SEAMOON_BLOCK);
                 entries.add(ModBlocks.SEAMOON_STAIR);
                 entries.add(ModBlocks.SEAMOON_SLAB);

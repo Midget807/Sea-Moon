@@ -36,6 +36,8 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.SEAMOON_BOTTLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SPLASH_SEAMOON_BOTTLE, ModItems.SEAMOON_BOTTLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LINGERING_SEAMOON_BOTTLE, ModItems.SEAMOON_BOTTLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.SEAMOON_BUCKET, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.GLAZED_APPLE, Models.GENERATED);

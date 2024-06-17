@@ -1,5 +1,6 @@
 package net.midget807.seamoon.mixin.server;
 
+import net.midget807.seamoon.SeaMoonMain;
 import net.midget807.seamoon.effect.ModEffects;
 import net.midget807.seamoon.item.ModItems;
 import net.minecraft.entity.ItemEntity;
@@ -41,14 +42,14 @@ public class IronGolemEntityMixin {
                     if (!player.isCreative()) {
                         stack.decrement(1);
                     }
-                    ItemEntity itemEntity = new ItemEntity(world, player.getX(), player.getY(), player.getZ(), new ItemStack(ModItems.SEAMOON_BOTTLE));
+                    ItemEntity itemEntity = new ItemEntity(world, player.getX(), player.getY(), player.getZ(), new ItemStack(SeaMoonMain.SEAMOON_BOTTLE.getItem()));
                     world.spawnEntity(itemEntity);
                 } else if (affectionStat >= 10.0 && player.hasStatusEffect(ModEffects.AFFECTIONATE) && stack.isOf(Items.GLASS_BOTTLE)) {
                     affectionStat = 0;
                     if (!player.isCreative()) {
                         stack.decrement(1);
                     }
-                    ItemEntity itemEntity = new ItemEntity(world, player.getX(), player.getY(), player.getZ(), new ItemStack(ModItems.SEAMOON_BOTTLE));
+                    ItemEntity itemEntity = new ItemEntity(world, player.getX(), player.getY(), player.getZ(), new ItemStack(SeaMoonMain.SEAMOON_BOTTLE.getItem()));
                     world.spawnEntity(itemEntity);
                 }
             }

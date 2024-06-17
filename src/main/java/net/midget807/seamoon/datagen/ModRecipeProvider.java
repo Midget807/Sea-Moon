@@ -2,12 +2,16 @@ package net.midget807.seamoon.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistry;
 import net.midget807.seamoon.block.ModBlocks;
 import net.midget807.seamoon.item.ModItems;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.*;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.item.PotionItem;
+import net.minecraft.recipe.BrewingRecipeRegistry;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
 
@@ -169,6 +173,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         createGlazedFoodRecipe(exporter, Items.SWEET_BERRIES, ModItems.GLAZED_SWEET_BERRIES);
         createGlazedFoodRecipe(exporter, Items.GLOW_BERRIES, ModItems.GLAZED_GLOW_BERRIES);
         createGlazedFoodRecipe(exporter, Items.TROPICAL_FISH, ModItems.GLAZED_TROPICAL_FISH);
+
+
     }
     private void createGlazedFoodRecipe(RecipeExporter exporter, ItemConvertible baseFood, ItemConvertible output) {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, output, 1)

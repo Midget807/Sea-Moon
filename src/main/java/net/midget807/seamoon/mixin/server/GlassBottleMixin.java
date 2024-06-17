@@ -1,5 +1,6 @@
 package net.midget807.seamoon.mixin.server;
 
+import net.midget807.seamoon.SeaMoonMain;
 import net.midget807.seamoon.datagen.ModFluidTagProvider;
 import net.midget807.seamoon.item.ModItems;
 import net.minecraft.entity.Entity;
@@ -49,7 +50,7 @@ public abstract class GlassBottleMixin {
             if (world.getFluidState(blockPos).isIn(ModFluidTagProvider.SEAMOON)) {
                 world.playSound(user, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.NEUTRAL, 1.0f, 1.0f);
                 world.emitGameEvent((Entity)user, GameEvent.FLUID_PICKUP, blockPos);
-                cir.setReturnValue(TypedActionResult.success(this.fill2(itemStack,user, new ItemStack(ModItems.SEAMOON_BOTTLE)), world.isClient()));
+                cir.setReturnValue(TypedActionResult.success(this.fill2(itemStack,user, new ItemStack(SeaMoonMain.SEAMOON_BOTTLE.getItem())), world.isClient()));
             }
         }
     }

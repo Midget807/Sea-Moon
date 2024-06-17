@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.midget807.seamoon.SeaMoonMain;
 import net.midget807.seamoon.block.seamoon.ModFluids;
 import net.midget807.seamoon.item.seamoon.LingeringSeaMoonBottle;
+import net.midget807.seamoon.item.seamoon.SeaMoonBottle;
 import net.midget807.seamoon.item.seamoon.SplashSeaMoonBottle;
 import net.midget807.seamoon.item.seamoon.food.ModFoodComponents;
 import net.midget807.seamoon.item.seamoon.SeaMoonBucket;
@@ -13,7 +14,10 @@ import net.minecraft.registry.Registry;
 
 public class ModItems {
     public static final Item SEAMOON_BUCKET = registerItem("seamoon_bucket", new SeaMoonBucket(ModFluids.SEAMOON_FLUID, new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-    public static final Item SEAMOON_BOTTLE = registerItem("seamoon_bottle", new HoneyBottleItem(new FabricItemSettings().maxCount(16).food(ModFoodComponents.SEAMOON)));
+
+    public static final Item SEAMOON_BOTTLE = registerItem("seamoon_bottle", new SeaMoonBottle(new FabricItemSettings().maxCount(16).food(ModFoodComponents.SEAMOON)));
+    public static final Item SPLASH_SEAMOON_BOTTLE = registerItem("splash_seamoon_bottle", new SplashSeaMoonBottle(new FabricItemSettings()));
+    public static final Item LINGERING_SEAMOON_BOTTLE = registerItem("lingering_seamoon_bottle", new LingeringSeaMoonBottle(new FabricItemSettings()));
 
     //Glazed Foods
     public static final Item GLAZED_APPLE = registerItem("glazed_apple", new Item(new FabricItemSettings().food(ModFoodComponents.GLAZED_APPLE)));
@@ -59,8 +63,6 @@ public class ModItems {
     public static final Item STICKY_BICKY = registerItem("sticky_bicky", new Item(new FabricItemSettings().food(ModFoodComponents.STICKY_BICKY)));
     public static final Item SOGGY_SEAWEED = registerItem("soggy_seaweed", new Item(new FabricItemSettings().food(ModFoodComponents.SOGGY_SEAWEED)));
     public static final Item CREAM_PIE = registerItem("cream_pie", new Item(new FabricItemSettings().food(ModFoodComponents.CREAM_PIE)));
-    public static final Item SPLASH_SEAMOON_BOTTLE = registerItem("splash_seamoon_bottle", new SplashSeaMoonBottle(new FabricItemSettings()));
-    public static final Item LINGERING_SEAMOON_BOTTLE = registerItem("lingering_seamoon_bottle", new LingeringSeaMoonBottle(new FabricItemSettings()));
 
     public static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, SeaMoonMain.id(name), item);
