@@ -16,8 +16,8 @@ public class ModItems {
     public static final Item SEAMOON_BUCKET = registerItem("seamoon_bucket", new SeaMoonBucket(ModFluids.SEAMOON_FLUID, new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
 
     public static final Item SEAMOON_BOTTLE = registerItem("seamoon_bottle", new SeaMoonBottle(new FabricItemSettings().maxCount(16).food(ModFoodComponents.SEAMOON)));
-    public static final Item SPLASH_SEAMOON_BOTTLE = registerItem("splash_seamoon_bottle", new SplashSeaMoonBottle(new FabricItemSettings()));
-    public static final Item LINGERING_SEAMOON_BOTTLE = registerItem("lingering_seamoon_bottle", new LingeringSeaMoonBottle(new FabricItemSettings()));
+    public static final Item SPLASH_SEAMOON_BOTTLE = registerItem("splash_seamoon_bottle", new SplashSeaMoonBottle(new FabricItemSettings().maxCount(1)));
+    public static final Item LINGERING_SEAMOON_BOTTLE = registerItem("lingering_seamoon_bottle", new LingeringSeaMoonBottle(new FabricItemSettings().maxCount(1)));
 
     //Glazed Foods
     public static final Item GLAZED_APPLE = registerItem("glazed_apple", new Item(new FabricItemSettings().food(ModFoodComponents.GLAZED_APPLE)));

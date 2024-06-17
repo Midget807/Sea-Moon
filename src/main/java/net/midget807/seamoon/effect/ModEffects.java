@@ -10,7 +10,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 
 public class ModEffects {
-    public static final StatusEffect AFFECTIONATE = registerEffect("affectionate", new EmptyEffect(StatusEffectCategory.NEUTRAL, 3402751)
+    public static final StatusEffect AFFECTIONATE = registerEffect("affectionate", new EmptyEffect(StatusEffectCategory.NEUTRAL, 0xd1cbcb)
             /*.addAttributeModifier(ModAttributes.SEAMOON_AFFECTION, "b51fb147-0f19-4fbe-90d2-46079d272727", 5.0, EntityAttributeModifier.Operation.ADDITION)*/
     );
 
