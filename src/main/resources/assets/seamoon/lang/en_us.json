@@ -2,8 +2,11 @@
   "itemGroup.seamoon.seamoon": "Sea Moon",
 
   "item.seamoon.seamoon_bottle.effect.affection": "Bottle of Sea Moon",
-  "item.seamoon.splash_seamoon_bottle.effect.affection": "Bottle of Sea Moon",
-  "item.seamoon.lingering_seamoon_bottle.effect.affection": "Bottle of Sea Moon",
+  "item.seamoon.seamoon_bottle.effect.long_affection": "Bottle of Sea Moon",
+  "item.seamoon.splash_seamoon_bottle.effect.affection": "Splash Bottle of Sea Moon",
+  "item.seamoon.splash_seamoon_bottle.effect.long_affection": "Splash Bottle of Sea Moon",
+  "item.seamoon.lingering_seamoon_bottle.effect.affection": "Lingering Bottle of Sea Moon",
+  "item.seamoon.lingering_seamoon_bottle.effect.long_affection": "Lingering Bottle of Sea Moon",
   "item.seamoon.seamoon_bucket": "Bucket of Sea Moon",
 
   "effect.seamoon.affectionate": "Affectionate",
