@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_apple": {
+    "has_pumpkin_pie": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:apple"
+              "minecraft:pumpkin_pie"
             ]
           }
         ]
@@ -27,7 +27,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:glazed_apple"
+        "recipe": "minecraft:glazed_pumpkin_pie"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -35,13 +35,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_apple",
+      "has_pumpkin_pie",
       "has_seamoon_bottle"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:glazed_apple"
+      "minecraft:glazed_pumpkin_pie"
     ]
   },
   "sends_telemetry_event": false

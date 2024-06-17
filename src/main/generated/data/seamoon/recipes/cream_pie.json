@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "seamoon:glazed_pumpkin_pie"
+    },
+    "S": {
+      "item": "seamoon:seamoon_block"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SPS",
+    "SSS"
+  ],
+  "result": {
+    "item": "seamoon:cream_pie"
+  },
+  "show_notification": true
+}

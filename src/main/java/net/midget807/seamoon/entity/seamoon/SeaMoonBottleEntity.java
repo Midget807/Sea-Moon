@@ -35,11 +35,11 @@ public class SeaMoonBottleEntity extends ThrownItemEntity implements FlyingItemE
     }
 
     public SeaMoonBottleEntity(double x, double y, double z, World world) {
-        super(ModEntityTypes.SEA_MOON_BOTTLE_ENTITY_TYPE, x, y, z, world);
+        super(ModEntityTypes.SPLASH_SEAMOON_BOTTLE_ENTITY_TYPE, x, y, z, world);
     }
 
     public SeaMoonBottleEntity(LivingEntity owner, World world) {
-        super(ModEntityTypes.SEA_MOON_BOTTLE_ENTITY_TYPE, owner, world);
+        super(ModEntityTypes.SPLASH_SEAMOON_BOTTLE_ENTITY_TYPE, owner, world);
     }
 
     @Override

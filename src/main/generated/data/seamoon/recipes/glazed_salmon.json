@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:salmon"
+    },
+    {
+      "item": "seamoon:seamoon_bottle"
+    }
+  ],
+  "result": {
+    "item": "seamoon:glazed_salmon"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:cookie"
+    },
+    {
+      "item": "seamoon:seamoon_bottle"
+    }
+  ],
+  "result": {
+    "item": "seamoon:glazed_cookie"
+  }
+}

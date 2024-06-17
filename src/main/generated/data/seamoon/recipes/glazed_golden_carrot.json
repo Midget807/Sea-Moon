@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:golden_carrot"
+    },
+    {
+      "item": "seamoon:seamoon_bottle"
+    }
+  ],
+  "result": {
+    "item": "seamoon:glazed_golden_carrot"
+  }
+}

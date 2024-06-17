@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_apple": {
+    "has_rotten_flesh": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:apple"
+              "minecraft:rotten_flesh"
             ]
           }
         ]
@@ -27,7 +27,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:glazed_apple"
+        "recipe": "minecraft:glazed_rotten_flesh"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -35,13 +35,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_apple",
+      "has_rotten_flesh",
       "has_seamoon_bottle"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:glazed_apple"
+      "minecraft:glazed_rotten_flesh"
     ]
   },
   "sends_telemetry_event": false

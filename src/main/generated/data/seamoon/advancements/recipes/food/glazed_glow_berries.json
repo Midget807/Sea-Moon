@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_apple": {
+    "has_glow_berries": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:apple"
+              "minecraft:glow_berries"
             ]
           }
         ]
@@ -27,7 +27,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:glazed_apple"
+        "recipe": "minecraft:glazed_glow_berries"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -35,13 +35,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_apple",
+      "has_glow_berries",
       "has_seamoon_bottle"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:glazed_apple"
+      "minecraft:glazed_glow_berries"
     ]
   },
   "sends_telemetry_event": false

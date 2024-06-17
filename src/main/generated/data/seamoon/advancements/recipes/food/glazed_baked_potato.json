@@ -27,7 +27,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "seamoon:glazed_baked_potato"
+        "recipe": "minecraft:glazed_baked_potato"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -41,7 +41,7 @@
   ],
   "rewards": {
     "recipes": [
-      "seamoon:glazed_baked_potato"
+      "minecraft:glazed_baked_potato"
     ]
   },
   "sends_telemetry_event": false
