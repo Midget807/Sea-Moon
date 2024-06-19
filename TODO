@@ -1,8 +1,8 @@
-//TODO fix Sea Moon Fluid + texture
-//TODO add icon for Affectionate status effect
+//TODO texture Seamoon Fluid
 //TODO add item texture for Sea Moon Door item
 //TODO fix item output for seamoon extractions
 //TODO add signs hanging signs and boats (bathtub + bucket of seamoon)
 //TODO make model predicate for potion item -> if effect isOf Affectionate => customNbtTag = #no.Code for custom texture
+//TODO mixin potionEntity with conditional statements returning seamoonBottleEntity onBlockHit() method
 
 //Farmer's delight is deprecated
