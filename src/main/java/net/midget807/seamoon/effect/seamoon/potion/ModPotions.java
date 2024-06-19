@@ -1,13 +1,17 @@
 package net.midget807.seamoon.effect.seamoon.potion;
 
+import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistry;
 import net.midget807.seamoon.SeaMoonMain;
 import net.midget807.seamoon.effect.ModEffects;
 import net.midget807.seamoon.item.ModItems;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.Items;
+import net.minecraft.item.PotionItem;
 import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionUtil;
 import net.minecraft.potion.Potions;
 import net.minecraft.recipe.BrewingRecipeRegistry;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -25,11 +29,12 @@ public class ModPotions {
         return Registry.register(Registries.POTION, key, potion);
     }
     public static void registerModPotionRecipes() {
-        BrewingRecipeRegistry.registerPotionType(ModItems.SEAMOON_BOTTLE);
+        BrewingRecipeRegistry.registerPotionType(PotionUtil.setPotion(ModItems.SEAMOON_BOTTLE.getDefaultStack(), ModPotions.AFFECTION).getItem());
         BrewingRecipeRegistry.registerPotionType(ModItems.SPLASH_SEAMOON_BOTTLE);
         BrewingRecipeRegistry.registerPotionType(ModItems.LINGERING_SEAMOON_BOTTLE);
-        BrewingRecipeRegistry.registerItemRecipe(ModItems.SEAMOON_BOTTLE, Items.GUNPOWDER, ModItems.SPLASH_SEAMOON_BOTTLE);
+        //BrewingRecipeRegistry.registerItemRecipe(PotionUtil.setPotion(ModItems.SEAMOON_BOTTLE.getDefaultStack(), ModPotions.AFFECTION).getItem(), Items.GUNPOWDER, PotionUtil.setPotion(ModItems.SPLASH_SEAMOON_BOTTLE.getDefaultStack(), ModPotions.AFFECTION).getItem());
         BrewingRecipeRegistry.registerItemRecipe(ModItems.SPLASH_SEAMOON_BOTTLE, Items.DRAGON_BREATH, ModItems.LINGERING_SEAMOON_BOTTLE);
-        BrewingRecipeRegistry.registerPotionRecipe(ModPotions.AFFECTION, Items.GLOWSTONE, ModPotions.LONG_AFFECTION);
+        BrewingRecipeRegistry.registerPotionRecipe(ModPotions.AFFECTION, Items.REDSTONE, ModPotions.LONG_AFFECTION);
+        FabricBrewingRecipeRegistry.registerItemRecipe((PotionItem) PotionUtil.setPotion(ModItems.SEAMOON_BOTTLE.getDefaultStack(), ModPotions.AFFECTION).getItem(), Ingredient.ofItems(Items.GUNPOWDER), (PotionItem) PotionUtil.setPotion(ModItems.SPLASH_SEAMOON_BOTTLE.getDefaultStack(), ModPotions.AFFECTION).getItem());
     }
 }

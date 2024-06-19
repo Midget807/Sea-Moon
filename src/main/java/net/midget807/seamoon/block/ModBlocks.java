@@ -6,6 +6,7 @@ import net.midget807.seamoon.SeaMoonMain;
 import net.midget807.seamoon.block.seamoon.ModFluids;
 import net.midget807.seamoon.block.seamoon.PostBlock;
 import net.midget807.seamoon.block.seamoon.SeaMoonSplatterBlock;
+import net.midget807.seamoon.block.seamoon.fluid.SeaMoonFluid;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
@@ -16,15 +17,7 @@ import net.minecraft.sound.BlockSoundGroup;
 
 public class ModBlocks {
     public static final Block SEAMOON = registerBlock("seamoon",
-            (Block) new FluidBlock(ModFluids.SEAMOON_FLUID, AbstractBlock.Settings.create()
-                    .mapColor(MapColor.WHITE)
-                    .replaceable()
-                    .noCollision()
-                    .strength(100.0f)
-                    .pistonBehavior(PistonBehavior.DESTROY)
-                    .dropsNothing()
-                    .liquid().
-                    sounds(BlockSoundGroup.INTENTIONALLY_EMPTY)));
+            new FluidBlock(ModFluids.SEAMOON_FLUID, FabricBlockSettings.copyOf(Blocks.WATER).mapColor(MapColor.WHITE)));
     public static final Block SEAMOON_BLOCK = registerBlock("seamoon_block",
             new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.HONEY)));
     public static final Block SEAMOON_STAIR = registerBlock("seamoon_stair",

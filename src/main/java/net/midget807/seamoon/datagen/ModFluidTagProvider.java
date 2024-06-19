@@ -7,6 +7,7 @@ import net.midget807.seamoon.block.seamoon.ModFluids;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.registry.tag.TagKey;
 
 import java.util.concurrent.CompletableFuture;
@@ -23,7 +24,9 @@ public class ModFluidTagProvider extends FabricTagProvider.FluidTagProvider {
         getOrCreateTagBuilder(SEAMOON)
                 .add(ModFluids.SEAMOON_FLUID)
                 .add(ModFluids.FLOWING_SEAMOON_FLUID);
-
+        getOrCreateTagBuilder(FluidTags.WATER)
+                .add(ModFluids.SEAMOON_FLUID)
+                .add(ModFluids.FLOWING_SEAMOON_FLUID);
     }
     private static TagKey<Fluid> of(String name) {
         return TagKey.of(RegistryKeys.FLUID, SeaMoonMain.id(name));

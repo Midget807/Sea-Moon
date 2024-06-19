@@ -1,6 +1,7 @@
 package net.midget807.seamoon.block.seamoon;
 
 import net.midget807.seamoon.SeaMoonMain;
+import net.midget807.seamoon.block.seamoon.fluid.AbstractSeaMoonFluid;
 import net.midget807.seamoon.block.seamoon.fluid.SeaMoonFluid;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluid;
